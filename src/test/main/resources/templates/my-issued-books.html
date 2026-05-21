@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Issued Books</title>
+    <link rel="stylesheet" href="/student-page.css">
+</head>
+<body>
+
+<div class="page-container">
+
+    <h1>My Issued Books</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Book Title</th>
+            <th>Issue Date</th>
+            <th>Return Date</th>
+            <th>Status</th>
+        </tr>
+
+        <tr th:each="item : ${issuedBooks}">
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.studentName}"></td>
+            <td th:text="${item.bookTitle}"></td>
+            <td th:text="${item.issueDate}"></td>
+            <td th:text="${item.returnDate}"></td>
+            <td th:text="${item.status}"></td>
+        </tr>
+    </table>
+
+    <a href="/student-dashboard" class="back-btn">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Return Books | LibraryPro</title>
+    <link rel="stylesheet" href="/issue-book.css">
+</head>
+<body>
+
+<div class="table-container">
+
+    <h1>Return Books</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Book Title</th>
+                <th>Issue Date</th>
+                <th>Return Date</th>
+                <th>Status</th>
+                <th>Fine</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="item : ${issuedBooks}">
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.studentName}"></td>
+                <td th:text="${item.bookTitle}"></td>
+                <td th:text="${item.issueDate}"></td>
+                <td th:text="${item.returnDate}"></td>
+                <td th:text="${item.status}"></td>
+                <td th:text="${item.fineAmount}"></td>
+
+                <td>
+                    <a th:if="${item.status == 'Issued'}"
+                       th:href="@{/return-book/{id}(id=${item.id})}"
+                       class="return-btn">
+                        Return
+                    </a>
+
+                    <span th:if="${item.status == 'Returned'}">
+                        Returned
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/admin-dashboard">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

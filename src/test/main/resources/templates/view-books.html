@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Books | LibraryPro</title>
+    <link rel="stylesheet" href="/book.css">
+</head>
+<body>
+
+<div class="table-container">
+
+    <h1>All Books</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+
+        <tr th:each="book : ${books}">
+            <td th:text="${book.id}"></td>
+            <td th:text="${book.title}"></td>
+            <td th:text="${book.author}"></td>
+            <td th:text="${book.category}"></td>
+            <td th:text="${book.quantity}"></td>
+
+            <td>
+                <a th:href="@{/edit-book/{id}(id=${book.id})}" class="edit-btn">
+                    Edit
+                </a>
+
+                <a th:href="@{/delete-book/{id}(id=${book.id})}" class="delete-btn">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <a href="/admin-dashboard" class="back-btn">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My Fines</title>
+    <link rel="stylesheet" href="/student-page.css">
+</head>
+<body>
+
+<div class="page-container">
+
+    <h1>My Fine Details</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Book Title</th>
+            <th>Return Date</th>
+            <th>Status</th>
+            <th>Fine Amount</th>
+        </tr>
+
+        <tr th:each="item : ${issuedBooks}">
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.bookTitle}"></td>
+            <td th:text="${item.returnDate}"></td>
+            <td th:text="${item.status}"></td>
+            <td th:text="${item.fineAmount}"></td>
+        </tr>
+    </table>
+
+    <a href="/student-dashboard" class="back-btn">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

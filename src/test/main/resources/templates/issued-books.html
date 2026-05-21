@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Issued Books | LibraryPro</title>
+    <link rel="stylesheet" href="/issue-book.css">
+</head>
+<body>
+
+<div class="table-container">
+
+    <h1>Issued Books Data</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Book Title</th>
+                <th>Issue Date</th>
+                <th>Return Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="item : ${issuedBooks}">
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.studentName}"></td>
+                <td th:text="${item.bookTitle}"></td>
+                <td th:text="${item.issueDate}"></td>
+                <td th:text="${item.returnDate}"></td>
+                <td th:text="${item.status}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/issue-book">Issue Another Book</a>
+    <a href="/admin-dashboard">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

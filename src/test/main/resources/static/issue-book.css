@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:linear-gradient(135deg,#071739,#0f4c81,#38bdf8);
+    min-height:100vh;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.box{
+    width:450px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.box h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#071739;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    color:#071739;
+    font-weight:bold;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#0077ff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#005fd1;
+}
+
+a{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    color:#0077ff;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* TABLE */
+
+.table-container{
+    padding:50px;
+}
+
+.table-container h1{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+}
+
+table{
+    width:100%;
+    background:white;
+    border-collapse:collapse;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+th{
+    background:#071739;
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+.return-btn{
+    background:#22c55e;
+    color:white;
+    text-decoration:none;
+    padding:8px 15px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.return-btn:hover{
+    background:#16a34a;
+}
+.return-btn{
+    background:#22c55e;
+    color:white;
+    text-decoration:none;
+    padding:8px 15px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.return-btn:hover{
+    background:#16a34a;
+}
+.success-msg{
+    background:#dcfce7;
+    color:#166534;
+    padding:12px;
+    border-radius:8px;
+    text-align:center;
+    margin-bottom:18px;
+    font-weight:bold;
+}
+
+.error-msg{
+    background:#fee2e2;
+    color:#991b1b;
+    padding:12px;
+    border-radius:8px;
+    text-align:center;
+    margin-bottom:18px;
+    font-weight:bold;
+}

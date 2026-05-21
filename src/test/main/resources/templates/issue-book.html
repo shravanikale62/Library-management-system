@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Issue Book | LibraryPro</title>
+
+    <link rel="stylesheet" href="/issue-book.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="box">
+
+        <h1>Issue Book</h1>
+        <div th:if="${success}" class="success-msg" th:text="${success}"></div>
+
+<div th:if="${error}" class="error-msg" th:text="${error}"></div>
+
+        <form action="/save-issued-book" method="post">
+
+            <input type="text"
+                   name="studentName"
+                   placeholder="Student Name"
+                   required>
+
+            <input type="text"
+                   name="bookTitle"
+                   placeholder="Book Title"
+                   required>
+
+            <label>Issue Date</label>
+
+            <input type="date"
+                   name="issueDate"
+                   required>
+
+            <label>Return Date</label>
+
+            <input type="date"
+                   name="returnDate"
+                   required>
+
+            <button type="submit">
+                Issue Book
+            </button>
+
+        </form>
+
+        <a href="/admin-dashboard">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

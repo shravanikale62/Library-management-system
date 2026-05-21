@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | LibraryPro</title>
+    <link rel="stylesheet" href="/admin-dashboard.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>LibraryPro</h2>
+
+    <a href="/admin-dashboard">Dashboard</a>
+    <a href="/add-book">Add Book</a>
+    <a href="/view-books">View Books</a>
+    <a href="/issue-book">Issue Book</a>
+    <a href="/return-books">Return Book</a>
+    <a href="/students">Students</a>
+    <a href="/reports">Reports</a>
+    <a href="/profile">Profile</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<div class="main">
+
+    <div class="topbar">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome, Admin</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2 th:text="${totalBooks}">0</h2>
+            <p>Total Books</p>
+        </div>
+
+        <div class="card">
+            <h2 th:text="${issuedBooks}">0</h2>
+            <p>Issued Books</p>
+        </div>
+
+        <div class="card">
+            <h2 th:text="${returnedBooks}">0</h2>
+            <p>Returned Books</p>
+        </div>
+
+        <div class="card">
+            <h2 th:text="${totalStudents}">0</h2>
+            <p>Total Students</p>
+        </div>
+
+        <div class="card">
+            <h2 th:text="${pendingFines}">0</h2>
+            <p>Pending Fines</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

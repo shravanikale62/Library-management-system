@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Available Books | LibraryPro</title>
+    <link rel="stylesheet" href="/student-page.css">
+</head>
+<body>
+
+<div class="page-container">
+
+    <h1>Available Books</h1>
+
+    <form action="/search-books" method="get" class="search-box">
+        <input type="text" name="keyword" placeholder="Search by title, author or category" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Available Quantity</th>
+        </tr>
+
+        <tr th:each="book : ${books}">
+            <td th:text="${book.id}"></td>
+            <td th:text="${book.title}"></td>
+            <td th:text="${book.author}"></td>
+            <td th:text="${book.category}"></td>
+            <td th:text="${book.quantity}"></td>
+        </tr>
+    </table>
+
+    <a href="/available-books" class="back-btn">Show All Books</a>
+    <a href="/student-dashboard" class="back-btn">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

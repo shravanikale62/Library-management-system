@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | LibraryPro</title>
+
+    <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="login-box register-box">
+
+        <h1>Create Account</h1>
+
+        <p>Register to continue to LibraryPro</p>
+
+        <form action="/register" method="post">
+
+            <input 
+                type="text"
+                name="fullName"
+                placeholder="Full Name"
+                required
+            >
+
+            <input 
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input 
+                type="text"
+                name="mobile"
+                placeholder="Mobile Number"
+                required
+            >
+
+            <select name="role" required>
+
+                <option value="">
+                    Select Role
+                </option>
+
+                <option value="Student">
+                    Student
+                </option>
+
+                <option value="Librarian">
+                    Librarian
+                </option>
+
+            </select>
+
+            <input 
+                type="password"
+                name="password"
+                placeholder="Create Password"
+                required
+            >
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+        <div class="register-link">
+
+            Already have an account?
+
+            <a href="/login">
+                Login
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

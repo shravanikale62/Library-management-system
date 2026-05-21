@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reports | LibraryPro</title>
+    <link rel="stylesheet" href="/admin-page.css">
+</head>
+<body>
+
+<div class="page-container">
+
+    <h1>Library Reports</h1>
+
+    <div class="report-cards">
+
+        <div class="report-card">
+            <h2 th:text="${totalBooks}"></h2>
+            <p>Total Books</p>
+        </div>
+
+        <div class="report-card">
+            <h2 th:text="${totalStudents}"></h2>
+            <p>Total Students</p>
+        </div>
+
+        <div class="report-card">
+            <h2 th:text="${issuedBooks}"></h2>
+            <p>Issued Books</p>
+        </div>
+
+        <div class="report-card">
+            <h2 th:text="${returnedBooks}"></h2>
+            <p>Returned Books</p>
+        </div>
+
+        <div class="report-card">
+            <h2 th:text="${pendingFines}"></h2>
+            <p>Total Fine Amount</p>
+        </div>
+
+    </div>
+
+    <a href="/admin-dashboard" class="back-btn">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>
